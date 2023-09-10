@@ -1,0 +1,189 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 150vh;
+  background-color: hwb(120 25% 63% / 0.733);
+  background: url("img1.jpg") no-repeat center center / cover;
+}
+
+input {
+  height: 3rem;
+  border-radius: 15px;
+  width: 300px;
+  font-size: x-large;
+  outline: none;
+}
+
+input:focus,
+input:active {
+  border: 2px dotted rgb(9, 204, 9);
+}
+
+#button {
+  background-color: rgb(9, 204, 9);
+  height: 3rem;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.child {
+  border-radius: 1px solid green;
+  margin-top: 100px;
+  border: 1px solid green;
+  padding: 25px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  color: rgb(31, 209, 31);
+}
+
+.list {
+  background-color: rgb(214, 204, 159);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  transition-duration: 0.5s;
+}
+
+a {
+  margin-left: 10px;
+}
+
+.del {
+  display: none;
+}
+
+#done,
+.done {
+  text-decoration: line-through;
+}
+#doneParent,
+.doneParent {
+  background-color: rgba(14, 236, 14, 0.63);
+}
+
+.delbtn,
+.donebtn {
+  text-decoration: none;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.delbtn {
+  background-color: rgba(238, 46, 46, 0.911);
+}
+.delbtn:hover {
+  opacity: 0.7;
+}
+
+.donebtn {
+  background-color: rgba(12, 194, 12, 0.849);
+}
+.donebtn:hover {
+  opacity: 0.9;
+}
+
+.content {
+  font-size: large;
+}
+
+.message {
+  /* background-color: white; */
+  width: fit-content;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 37%;
+  backdrop-filter: blur(100px);
+  animation-name: message;
+  animation-duration: 0.5s;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+}
+
+@keyframes message {
+  from {
+    top: -3000px;
+    opacity: 0;
+  }
+  to {
+    top: 10px;
+    opacity: 1;
+  }
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+}
+
+.header .options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .options a {
+  padding: 8px 12px;
+  margin-left: 5px;
+  border: 1px solid black;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .options a:hover {
+  background-color: white;
+  color: black;
+}
+
+.menu {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  top: 85px;
+  right: 30px;
+  animation-name: show;
+  animation-duration: 0.5s;
+  z-index: 99;
+}
+
+@keyframes show {
+  from {
+    top: 60px;
+    right: 30px;
+    opacity: 0;
+  }
+  to {
+    top: 85px;
+    right: 30px;
+    opacity: 1;
+  }
+}
+
+.none {
+  display: none;
+}
+
+.menu button {
+  padding: 8px 16px;
+}
+
+.menu button:hover {
+  background-color: rgba(12, 194, 12, 0.849);
+}
